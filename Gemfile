@@ -36,10 +36,10 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.13'
   gem 'rspec-rails'
+  gem 'shoulda-matchers'
   gem 'selenium-webdriver'
   gem 'simplecov', require: false, group: :test
   gem 'launchy'
-  gem 'shoulda-matchers'
   gem 'pry'
   gem 'active_designer'
   gem 'database_cleaner'
