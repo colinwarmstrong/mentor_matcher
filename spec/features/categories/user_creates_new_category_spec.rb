@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'User wants to create a new category' do
+describe "User visits 'categories/new'" do
   it 'successfully fills in required fields' do
     title = 'Sports'
     description = "Athletic endeavors"
