@@ -1,2 +1,4 @@
 <h1><%= @category.title %></h1>
 <h3><%= @category.description %></h3>
+
+<%= link_to 'Delete', category_path(@category), method: 'delete', data: {confirm: "Really want to delete this job?"}  %>
