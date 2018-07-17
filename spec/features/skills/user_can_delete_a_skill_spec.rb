@@ -9,4 +9,5 @@ describe "User visits '/skills/:id'" do
 
     click_on 'Delete'
 
-    expect(current_path).to eq
+  end
+end

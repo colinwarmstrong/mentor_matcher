@@ -10,14 +10,12 @@ class SkillsController < ApplicationController
   end
 
   def new
-    @user = User.find(params[:user_id])
     @skill = Skill.new
   end
 
   def create
-    @user = User.find(params[:user_id])
-    @user.skills.create(skill_params)
-    redirect_to user_path(@user)
+    skill = Skill.create(skill_params)
+    redirect_to skill_path(skill)
   end
 
   def edit
@@ -28,6 +26,9 @@ class SkillsController < ApplicationController
     skill = Skill.find(params[:id])
     skill.update(skill_params)
     redirect_to skill_path(skill)
+  end
+
+  def destroy
   end
 
   private

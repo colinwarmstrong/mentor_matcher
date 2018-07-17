@@ -13,7 +13,9 @@ describe "User visits '/users/:id/skills'" do
     skill_1 = user.skills.create(title: 'Piano', description: 'Keys', category_id: category.id)
     skill_2 = user.skills.create(title: 'Ruby', description: 'The language of champions', category_id: category.id)
 
-    visit user_skills_path(user)
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+
+    visit user_path(user)
 
     expect(page).to have_content(skill_1.title)
     expect(page).to have_content(skill_1.description)

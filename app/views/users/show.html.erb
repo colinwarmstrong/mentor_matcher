@@ -1,8 +1,6 @@
-<% if current_user.name %>
-  <h1>Welcome, <%= current_user.name %>!</h1>
-<% end %>
+<h1>Welcome, <%= current_user.name %>!</h1>
 
-<p><%= link_to 'Add New Skill', new_user_skill_path(@user) %></p>
+<p><%= link_to 'Add New Skill', new_skill_path(@user) %></p>
 
 <% @user.skills.each do |skill| %>
   <div>

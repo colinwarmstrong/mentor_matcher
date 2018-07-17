@@ -7,14 +7,15 @@ describe "User visits '/user/:id/skills/new'" do
       password: '54321',
       name: 'Colin',
       email: 'colin@email.com',
-      city: 'Denver',
-      role: 0)
+      city: 'Denver')
     category = Category.create(title: 'Music')
+
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
     new_skill_title = 'Piano'
     new_skill_description = 'White and black keys'
 
-    visit new_user_skill_path(user)
+    visit new_skill_path
 
     select category.title, from: :skill_category_id
     fill_in :skill_title, with: new_skill_title
@@ -22,7 +23,7 @@ describe "User visits '/user/:id/skills/new'" do
 
     click_on 'Add Skill'
 
-    expect(current_path).to eq(user_path(user))
+    expect(current_path).to eq(skill_path(Skill.last))
     expect(page).to have_content(new_skill_title)
   end
 end
