@@ -16,7 +16,6 @@ describe 'Registration workflow' do
     fill_in :user_name, with: name
     fill_in :user_email, with: 'colin@email.com'
     fill_in :user_city, with: 'Denver'
-    fill_in :user_role, with: 1
 
     click_on 'Create User'
 
@@ -31,8 +30,7 @@ describe 'Registration workflow' do
       password: '54321',
       name: 'Colin',
       email: 'colin@email.com',
-      city: 'Denver',
-      role: 0)
+      city: 'Denver')
     count = User.count
 
     visit root_path
@@ -46,7 +44,6 @@ describe 'Registration workflow' do
     fill_in :user_name, with: 'Jill'
     fill_in :user_email, with: 'jill@email.com'
     fill_in :user_city, with: 'Chicago'
-    fill_in :user_role, with: 0
 
     click_on 'Create User'
 

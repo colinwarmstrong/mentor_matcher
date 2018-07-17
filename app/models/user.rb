@@ -9,5 +9,7 @@ class User < ApplicationRecord
   has_many :user_skills
   has_many :skills, through: :user_skills
 
+  enum role: ['default', 'admin']
+
   has_secure_password
 end

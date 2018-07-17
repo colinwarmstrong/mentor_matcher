@@ -28,5 +28,18 @@ describe User, type: :model do
       expect(user.role).to eq('default')
       expect(user.default?).to be_truthy
     end
+
+    it 'can be created as an admin' do
+      user = User.create(
+        username: 'test',
+        password: '54321',
+        name: 'Colin',
+        email: 'colin@email.com',
+        city: 'Denver',
+        role: 1)
+
+      expect(user.role).to eq('admin')
+      expect(user.admin?).to be_truthy
+    end
   end
 end
