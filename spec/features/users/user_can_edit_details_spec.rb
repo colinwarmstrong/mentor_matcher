@@ -7,8 +7,7 @@ describe "User visits 'users/1/edit'" do
       password: '54321',
       name: 'Colin',
       email: 'colin@email.com',
-      city: 'Denver',
-      role: 0)
+      city: 'Denver')
 
     visit login_path
 

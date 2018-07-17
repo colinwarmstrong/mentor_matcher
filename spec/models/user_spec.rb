@@ -15,4 +15,18 @@ describe User, type: :model do
     it {should have_many :user_skills}
     it {should have_many(:skills).through(:user_skills)}
   end
+
+  describe 'Roles' do
+    it 'can be created as a defualt user' do
+      user = User.create(
+        username: 'test',
+        password: '54321',
+        name: 'Colin',
+        email: 'colin@email.com',
+        city: 'Denver')
+
+      expect(user.role).to eq('default')
+      expect(user.default?).to be_truthy
+    end
+  end
 end

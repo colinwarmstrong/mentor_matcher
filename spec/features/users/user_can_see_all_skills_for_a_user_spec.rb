@@ -7,8 +7,7 @@ describe "User visits '/users/:id/skills'" do
       password: '54321',
       name: 'Colin',
       email: 'colin@email.com',
-      city: 'Denver',
-      role: 0)
+      city: 'Denver')
     category = Category.create(title: 'Music')
     skill_1 = user.skills.create(title: 'Piano', description: 'Keys', category_id: category.id)
     skill_2 = user.skills.create(title: 'Ruby', description: 'The language of champions', category_id: category.id)

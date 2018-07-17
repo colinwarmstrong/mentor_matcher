@@ -1,6 +1,6 @@
-<h1>Skills for <% @user.name %></h1>
-
-<%= @skills.each do |skill| %>
+<h1>Skills</h1>
+<%= link_to 'Add New Skill', new_skill_path %>
+<% @skills.each do |skill| %>
   <h4><%= link_to skill.title, skill_path(skill) %></h4>
   <p><%= skill.description %></p>
   <p><%= link_to 'Edit', edit_skill_path(skill) %></p>
