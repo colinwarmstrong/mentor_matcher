@@ -1,3 +1,14 @@
-<h1>Welcome, <%= current_user.name %>!</h1>
+<% if current_user.name %>
+  <h1>Welcome, <%= current_user.name %>!</h1>
+<% end %>
 
-<%= link_to 'Logout', logout_path %>
+<p><%= link_to 'Add New Skill', new_user_skill_path(@user) %></p>
+
+<% @user.skills.each do |skill| %>
+  <div>
+    <h4><%= skill.title %></h4>
+    <p><%= skill.description %></p>
+  </div>
+<% end %>
+
+<p><%= link_to 'Logout', logout_path %></p>

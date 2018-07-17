@@ -1,0 +1,5 @@
+<%= @skill.title %>
+<%= @skill.description %>
+
+<p><%= link_to 'Edit', edit_skill_path(@skill) %></p>
+<p><%= link_to 'Delete', skill_path(@skill), method: 'delete', data: {confirm: "Really want to delete this skill?"}  %></p>
