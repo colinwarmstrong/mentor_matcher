@@ -6,5 +6,17 @@
   <h3><%= @category.description %></h3>
 </summary>
 
-<p><%= link_to 'Edit', edit_category_path(@category) %>
-<p><%= link_to 'Delete', category_path(@category), method: 'delete', data: {confirm: "Really want to delete this category?"}  %></p>
+<div class="btn-group" id='category-show-buttons' role="group" aria-label="Basic example">
+  <%= link_to "Delete", category_path(@category), class: "btn btn-secondary", id:'category-show-delete', method: 'delete', data: {confirm: "Really want to delete this category?"} %>
+  <%= link_to "Edit", edit_category_path(@category), class: "btn btn-secondary", id:'category-show-edit', method: 'get' %>
+</div>
+
+<section class='category-show-main'>
+  <h3 id='category-show-main-header'>Skills</h3>
+  <% @skills.each do |skill| %>
+    <div class='category-show-main-item'>
+      <h4><%= link_to skill.title, skill_path(skill) %></h4>
+      <p><%= skill.description %></p>
+    </div>
+  <% end %>
+</section>

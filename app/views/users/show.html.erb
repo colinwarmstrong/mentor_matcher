@@ -5,20 +5,22 @@
 <a class="btn btn-primary btn-lg btn-block" id='add-new-skill-button' href="<%= new_skill_path %>">Add New Skill</a>
 
 <section class='user-show-main'>
-  <h2>Skills You Want to Learn</h2>
-  <% @user.skills.each do |skill| %>
-    <div class='user-show-skill'>
-      <h4><%= skill.title %></h4>
-      <p><%= skill.description %></p>
-    </div>
-  <% end %>
-  <br>
-  <h2>Skills You Mentor</h2>
-  <% @user.skills.each do |skill| %>
-    <div class='user-show-skill'>
-      <h4><%= skill.title %></h4>
-      <p><%= skill.description %></p>
-    </div>
-  <% end %>
-  <h3>
+  <div class='user-show-main-left'>
+    <h2 id='skills-to-learn-header'>Skills You Want to Learn</h2>
+    <% @user.skills_to_learn.each do |skill| %>
+      <div class='user-show-skill'>
+        <h4><%= link_to skill.title, skill_path(skill) %></h4>
+        <p><%= skill.description %></p>
+      </div>
+    <% end %>
+  </div>
+  <div class='user-show-main-right'>
+    <h2 id='skills-to-mentor-header'>Skills You Mentor</h2>
+    <% @user.skills_to_mentor.each do |skill| %>
+      <div class='user-show-skill'>
+        <h4><%= link_to skill.title, skill_path(skill) %></h4>
+        <p><%= skill.description %></p>
+      </div>
+    <% end %>
+  </div>
 </section>
