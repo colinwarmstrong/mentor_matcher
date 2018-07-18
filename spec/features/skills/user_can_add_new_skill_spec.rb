@@ -21,7 +21,7 @@ describe "User visits '/user/:id/skills/new'" do
     fill_in :skill_title, with: new_skill_title
     fill_in :skill_description, with: new_skill_description
 
-    click_on 'Add Skill'
+    click_on 'Create Skill'
 
     expect(current_path).to eq(skill_path(Skill.last))
     expect(page).to have_content(new_skill_title)
