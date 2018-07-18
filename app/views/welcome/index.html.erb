@@ -1,1 +1,8 @@
-<%= link_to 'Sign Up to be a New User', new_user_path %>
+<header class='category-index-header'>
+  <div>Welcome to MentorMatcher!</div>
+</header>
+
+<section class='welcome-page-main'>
+  <a class="btn btn-info " id='signup-button' href="<%= new_user_path %>">Sign Up to be a New User</a>
+  <a class="btn btn-success" id='initial-login-button' href="<%= login_path %>">I already have an account</a>
+</section>

@@ -6,9 +6,39 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
   </head>
 
   <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mentor-nav">
+      <div class='navbar-brand'>MentorMatcher</div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <% if current_user %>
+            <li class="nav-item active">
+              <a class="nav-link" href="<%= user_path(current_user) %>"><%= current_user.name %><span class="sr-only">(current)</span></a>
+            </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="<%= skills_path %>">Skills</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="<%= categories_path %>">Categories</a>
+          </li>
+        </ul>
+        <% end %>
+      </div>
+      <% if current_user %>
+        <a class="nav-item active nav-link" id='nav-logout-button' href="<%= logout_path %>">Logout<span class="sr-only">(current)</span></a>
+      <% else %>
+        <a class="nav-item active nav-link" id='nav-login-button' href="<%= login_path %>">Login<span class="sr-only">(current)</span></a>
+      <% end %>
+    </nav>
     <%= yield %>
+    <footer>
+      <div>presented by Colin Armstrong</div>
+    </footer>
   </body>
 </html>
