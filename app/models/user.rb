@@ -12,4 +12,11 @@ class User < ApplicationRecord
   enum role: ['default', 'admin']
 
   has_secure_password
+
+  def skills_to_learn
+    skills.where()
+  end
+
+  def skills_to_mentor
+  end
 end
