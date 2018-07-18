@@ -6,19 +6,30 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create!(
+User.create(
   username: 'admin',
   password: 'password',
-  name: 'Colin',
+  name: 'Admin Boi',
   email: 'colinwarmstrong@gmail.com',
   phone_number: '8156852473',
   city: 'Denver',
   role: 1)
 
-User.create!(
+User.create(
   username: 'default',
   password: 'password',
-  name: 'Default Boy',
+  name: 'Default Boi',
   email: 'default@gmail.com',
   phone_number: '5555555555',
   city: 'Denver')
+
+Category.create(title: 'Outdoors', description: 'Fresh air and sunshine')
+Category.create(title: 'Music', description: 'Melodic bliss')
+Category.create(title: 'Technology', description: 'The latest and greatest tech')
+Category.create(title: 'Academics', description: 'Wrting, reading, and arithmetic')
+Category.create(title: 'Arts', description: 'Let your artistic side shine')
+Category.create(title: 'Athletics', description: 'For the love of the game')
+Category.create(title: 'Mechanical', description: 'Get your hands dirty')
+Category.create(title: 'Carpentry', description: 'Hammers and nails')
+Category.create(title: 'Cooking', description: "That's a spicy meatball")
+Category.create(title: 'Language', description: 'Learn a language, explore the world')

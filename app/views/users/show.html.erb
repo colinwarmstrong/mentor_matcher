@@ -1,12 +1,15 @@
-<h1>Welcome, <%= current_user.name %>!</h1>
+<header>
+  <h1>Welcome, <%= current_user.name %></h1>
+</header>
 
-<p><%= link_to 'Add New Skill', new_skill_path(@user) %></p>
+<a class="btn btn-primary btn-lg btn-block" id='add-new-skill-button' href="<%= new_skill_path %>">Add New Skill</a>
 
-<% @user.skills.each do |skill| %>
-  <div>
-    <h4><%= skill.title %></h4>
-    <p><%= skill.description %></p>
-  </div>
-<% end %>
-
-<p><%= link_to 'Logout', logout_path %></p>
+<section class='user-show-main'>
+  <h3>Your Skills</h3>
+  <% @user.skills.each do |skill| %>
+    <div>
+      <h4><%= skill.title %></h4>
+      <p><%= skill.description %></p>
+    </div>
+  <% end %>
+</section>

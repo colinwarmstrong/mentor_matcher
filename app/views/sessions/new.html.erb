@@ -1,9 +1,24 @@
-<%= form_tag login_path do %>
+<header>
+  <div>Please sign in</div>
+</header>
 
-  <%= label_tag :username %>
-  <%= text_field_tag :username %>
-  <%= label_tag :password %>
-  <%= password_field_tag :password %>
+<section class='login-main'>
+  <div class="text-center">
+    <div class="form-signin">
+      <%= form_tag login_path do %>
 
-  <%= submit_tag 'Login' %>
-<% end %>
+      <div>
+        <%= label_tag :username %>
+        <%= text_field_tag :username %>
+      </div>
+      <div>
+        <%= label_tag :password %>
+        <%= password_field_tag :password %>
+      </div>
+      <div class='login-button-container'>
+        <%= submit_tag 'Login', class:"btn btn-lg btn-primary btn-block", id:'login-button' %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</section>

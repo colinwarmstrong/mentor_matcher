@@ -1,9 +1,13 @@
 <%= form_for @category do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-
-  <%= f.submit %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+  <div>
+    <%= f.submit class:"btn btn-primary mb-2" %>
+  </div>
 <% end %>

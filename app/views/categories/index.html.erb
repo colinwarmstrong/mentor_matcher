@@ -1,6 +1,8 @@
-<h1>Categories</h1>
+<header class='category-index-header'>
+  <div>Categories</div>
+</header>
 
-<%= link_to 'Create New Category', new_category_path %>
+<a class="btn btn-primary btn-lg btn-block" id='add-new-skill-button' href="<%= new_category_path %>">Create New Category</a>
 
 <% @categories.each do |category| %>
   <h4><%= link_to category.title, category_path(category) %></h4>

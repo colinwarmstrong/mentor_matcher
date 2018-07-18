@@ -1,5 +1,10 @@
-<%= @skill.title %>
-<%= @skill.description %>
+<header>
+  <div>Skill: <%= @skill.title %></div>
+</header>
+
+<summary>
+  <div><%= @skill.description %></div>
+</summary>
 
 <p><%= link_to 'Edit', edit_skill_path(@skill) %></p>
 <p><%= link_to 'Delete', skill_path(@skill), method: 'delete', data: {confirm: "Really want to delete this skill?"}  %></p>
