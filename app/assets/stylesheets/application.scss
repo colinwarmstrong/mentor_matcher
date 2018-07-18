@@ -80,6 +80,22 @@ summary {
   box-shadow: 5px 5px grey;
 }
 
+.new-user-main {
+  height: 100%;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.new-user-form {
+  height: 250px;
+  padding: 20px;
+  border: solid 1px gray;
+  border-radius: 10px;
+  background-color: rgba(230,233,237,1.0);
+  box-shadow: 5px 5px grey;
+}
+
 .new-category-main {
   height: 100%;
   margin-top: 80px;
