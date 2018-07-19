@@ -9,7 +9,7 @@
 <% end %>
 
 <% if @user.id == current_user.id || current_admin? %>
-  <a class="btn btn-primary btn-lg btn-block" id='add-new-skill-button' href="<%= new_skill_path %>">Add New Skill</a>
+  <a class="btn btn-primary btn-lg btn-block" id='add-new-skill-button' href="<%= new_user_skill_path(@user) %>">Add New Skill</a>
 <% end %>
 
 <section class='user-info'>
