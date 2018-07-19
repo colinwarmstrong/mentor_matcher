@@ -7,7 +7,7 @@
 <% end %>
 
 <section class='skill-index-main'>
-  <% @skills.each do |skill| %>
+  <% @skills.shuffle.each do |skill| %>
     <div class='skill-index-main-item'>
       <h4><%= link_to skill.title, skill_path(skill) %></h4>
       <p><%= skill.description %></p>
