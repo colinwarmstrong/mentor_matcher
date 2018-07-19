@@ -2,6 +2,16 @@ require 'rails_helper'
 
 describe "User visits 'categories/new'" do
   it 'successfully fills in required fields' do
+    user = User.create(
+      username: 'test',
+      password: '54321',
+      name: 'Colin',
+      email: 'colin@email.com',
+      city: 'Denver',
+      role: 1)
+
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+
     title = 'Sports'
     description = "Athletic endeavors"
 
@@ -18,6 +28,16 @@ describe "User visits 'categories/new'" do
   end
 
   it 'enters duplicate title' do
+    user = User.create(
+      username: 'test',
+      password: '54321',
+      name: 'Colin',
+      email: 'colin@email.com',
+      city: 'Denver',
+      role: 1)
+
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+
     category = Category.create(title: 'Outdoors', description: 'Fresh air')
     count = Category.count
 
