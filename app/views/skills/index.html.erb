@@ -2,11 +2,15 @@
   <div>Skills</div>
 </header>
 
-<a class="btn btn-primary btn-lg btn-block" id='add-new-skill-button' href="<%= new_skill_path %>">Create New Skill</a>
-
-<% @skills.each do |skill| %>
-  <h4><%= link_to skill.title, skill_path(skill) %></h4>
-  <p><%= skill.description %></p>
-  <p><%= link_to 'Edit', edit_skill_path(skill) %></p>
-  <p><%= link_to 'Delete', skill_path(skill), method: 'delete', data: {confirm: "Really want to delete this skill?"}  %></p>
+<% if current_admin? %>
+  <a class="btn btn-primary btn-lg btn-block" id='add-new-skill-button' href="<%= new_skill_path %>">Create New Skill</a>
 <% end %>
+
+<section class='skill-index-main'>
+  <% @skills.each do |skill| %>
+    <div class='skill-index-main-item'>
+      <h4><%= link_to skill.title, skill_path(skill) %></h4>
+      <p><%= skill.description %></p>
+    </div>
+  <% end %>
+</section>

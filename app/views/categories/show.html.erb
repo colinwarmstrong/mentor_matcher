@@ -1,19 +1,18 @@
 <header>
   <h1><%= @category.title %></h1>
+  <h4><%= @category.description %></h4>
 </header>
 
-<summary>
-  <h3><%= @category.description %></h3>
-</summary>
-
-<div class="btn-group" id='category-show-buttons' role="group" aria-label="Basic example">
-  <%= link_to "Delete", category_path(@category), class: "btn btn-secondary", id:'category-show-delete', method: 'delete', data: {confirm: "Really want to delete this category?"} %>
-  <%= link_to "Edit", edit_category_path(@category), class: "btn btn-secondary", id:'category-show-edit', method: 'get' %>
-</div>
+<% if current_admin? %>
+  <div class="btn-group" id='category-show-buttons' role="group" aria-label="Basic example">
+    <%= link_to "Delete", category_path(@category), class: "btn btn-secondary", id:'category-show-delete', method: 'delete', data: {confirm: "Really want to delete this category?"} %>
+    <%= link_to "Edit", edit_category_path(@category), class: "btn btn-secondary", id:'category-show-edit', method: 'get' %>
+  </div>
+<% end %>
 
 <section class='category-show-main'>
   <h3 id='category-show-main-header'>Skills</h3>
-  <% @skills.each do |skill| %>
+  <% @skills.shuffle.each do |skill| %>
     <div class='category-show-main-item'>
       <h4><%= link_to skill.title, skill_path(skill) %></h4>
       <p><%= skill.description %></p>

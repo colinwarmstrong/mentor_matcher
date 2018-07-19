@@ -12,8 +12,8 @@ users << User.create(
   username: 'admin',
   password: 'password',
   name: 'Admin Boy',
-  email: 'colinwarmstrong@gmail.com',
-  phone_number: '8156852473',
+  email: 'adminboy@gmail.com',
+  phone_number: '5555555555',
   city: 'Denver',
   role: 1)
 
@@ -58,15 +58,15 @@ users << User.create(
   city: 'Denver')
 
 users << User.create(
-  username: 'matt',
+  username: 'matt_p',
   password: 'password',
-  name: 'Matt',
+  name: 'Matt P',
   email: 'default@gmail.com',
   phone_number: '5555555555',
   city: 'Denver')
 
 users << User.create(
-  username: 'Lucas',
+  username: 'lucas',
   password: 'password',
   name: 'Lucas',
   email: 'default@gmail.com',
@@ -85,6 +85,478 @@ users << User.create(
   username: 'jp',
   password: 'password',
   name: 'JP',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'andrew',
+  password: 'password',
+  name: 'Andrew',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'seth',
+  password: 'password',
+  name: 'Seth',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'rob',
+  password: 'password',
+  name: 'Rob',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'scott',
+  password: 'password',
+  name: 'Scott',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'ian',
+  password: 'password',
+  name: 'Ian',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'dione',
+  password: 'password',
+  name: 'Dione',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'claire',
+  password: 'password',
+  name: 'Claire',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'connor',
+  password: 'password',
+  name: 'Connor',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'matt_b',
+  password: 'password',
+  name: 'Matt B',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'emmie',
+  password: 'password',
+  name: 'Emmie',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'angela',
+  password: 'password',
+  name: 'Angela',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'keegan',
+  password: 'password',
+  name: 'Keegan',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'elliot',
+  password: 'password',
+  name: 'Elliot',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: '',
+  password: 'password',
+  name: 'Emmie',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'emmie',
+  password: 'password',
+  name: 'Emmie',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'emmie',
+  password: 'password',
+  name: 'Emmie',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'emmie',
+  password: 'password',
+  name: 'Emmie',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'emmie',
+  password: 'password',
+  name: 'Emmie',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'jill',
+  password: 'password',
+  name: 'Jill',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'ben',
+  password: 'password',
+  name: 'Ben',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'tom',
+  password: 'password',
+  name: 'Tom',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'corbett',
+  password: 'password',
+  name: 'Corbett',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'steve',
+  password: 'password',
+  name: 'Steve',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'chris',
+  password: 'password',
+  name: 'Chris',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'eric',
+  password: 'password',
+  name: 'Eric',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'andrew',
+  password: 'password',
+  name: 'Andrew',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'jim',
+  password: 'password',
+  name: 'Jim',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'brad',
+  password: 'password',
+  name: 'Brad',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'kurt',
+  password: 'password',
+  name: 'Kurt',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'sherri',
+  password: 'password',
+  name: 'Sherri',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'jordan',
+  password: 'password',
+  name: 'Jordan',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'lauren',
+  password: 'password',
+  name: 'Lauren',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'ryan',
+  password: 'password',
+  name: 'Ryan',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'pat',
+  password: 'password',
+  name: 'Pat',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'clyde',
+  password: 'password',
+  name: 'Clyde',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'mary',
+  password: 'password',
+  name: 'Mary',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'morgan',
+  password: 'password',
+  name: 'Morgan',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'brittany',
+  password: 'password',
+  name: 'Brittany',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'alecia',
+  password: 'password',
+  name: 'Alecia',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'terry',
+  password: 'password',
+  name: 'Terry',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'courtney',
+  password: 'password',
+  name: 'Courtney',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'bryce',
+  password: 'password',
+  name: 'Bryce',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'hadley',
+  password: 'password',
+  name: 'Hadley',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'margaret',
+  password: 'password',
+  name: 'Margaret',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'phil',
+  password: 'password',
+  name: 'Phil',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'kyle',
+  password: 'password',
+  name: 'Kyle',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'keith',
+  password: 'password',
+  name: 'Keith',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'jose',
+  password: 'password',
+  name: 'Jose',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'jonathan',
+  password: 'password',
+  name: 'Jonathan',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'isabella',
+  password: 'password',
+  name: 'Isabella',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'leroy',
+  password: 'password',
+  name: 'Leroy',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'spiderman',
+  password: 'password',
+  name: 'Spiderman',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'ricky',
+  password: 'password',
+  name: 'Ricky',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'han_solo',
+  password: 'password',
+  name: 'Han Solo',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'obi_wan',
+  password: 'password',
+  name: 'Obi-Wan Kenobi',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'darth vader',
+  password: 'password',
+  name: 'Darth Vader',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'luke_skywalker',
+  password: 'password',
+  name: 'Luke Skywalker',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'anakin',
+  password: 'password',
+  name: 'Anakin',
+  email: 'default@gmail.com',
+  phone_number: '5555555555',
+  city: 'Denver')
+
+users << User.create(
+  username: 'leia',
+  password: 'password',
+  name: 'Leia',
   email: 'default@gmail.com',
   phone_number: '5555555555',
   city: 'Denver')
@@ -108,9 +580,6 @@ skills << categories.sample.skills.create(title: 'Football', description: "Touch
 skills << categories.sample.skills.create(title: 'Hockey', description: "Fuel your inner Canadian")
 skills << categories.sample.skills.create(title: 'Soccer', description: "No hands")
 skills << categories.sample.skills.create(title: 'Running', description: "Jogging all day every day")
-skills << categories.sample.skills.create(title: 'Lacrosse', description: "It's a sport!")
-skills << categories.sample.skills.create(title: 'Ping-Pong', description: "It's like tennis but on a table")
-skills << categories.sample.skills.create(title: 'Pool', description: "Impress your friends at the bar")
 
 skills << categories.sample.skills.create(title: 'Camping', description: 'Who needs showers anyway?')
 skills << categories.sample.skills.create(title: 'Climbing', description: 'The ground is for squares')
@@ -160,9 +629,12 @@ skills << categories.sample.skills.create(title: 'French', description: 'Bonjour
 skills << categories.sample.skills.create(title: 'German', description: 'Hallo')
 skills << categories.sample.skills.create(title: 'Italian', description: 'Ciao')
 
-users.each do |user|
-  5.times do
+shuffled_users = users.shuffle!
+shuffled_users.each do |user|
+  6.times do
     UserSkill.create(user_id: user.id, skill_id: skills.sample.id)
   end
-  UserSkill.create(user_id: user.id, skill_id: skills.sample.id, mentoring?: true)
+  3.times do
+    UserSkill.create(user_id: user.id, skill_id: skills.sample.id, mentoring?: true)
+  end
 end

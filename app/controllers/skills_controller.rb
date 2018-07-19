@@ -6,6 +6,8 @@ class SkillsController < ApplicationController
 
   def show
     @skill = Skill.find(params[:id])
+    @students = @skill.find_students
+    @mentors = @skill.find_mentors
   end
 
   def new
