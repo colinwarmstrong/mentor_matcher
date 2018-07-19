@@ -1,5 +1,5 @@
 class SkillsController < ApplicationController
-  before_action :require_admin, only: [:new, :create, :edit, :update, :destroy]
+  before_action :require_admin, only: [:edit, :update, :destroy]
 
   def index
     @skills = Skill.all
@@ -12,12 +12,24 @@ class SkillsController < ApplicationController
   end
 
   def new
-    @skill = Skill.new
+    if params[:user_id]
+      @user_id = params[:user_id]
+      @user_skill = UserSkill.new
+    else
+      @skill = Skill.new
+    end
   end
 
   def create
-    skill = Skill.create(skill_params)
-    redirect_to skill_path(skill)
+    if params[:commit] == 'Add New Skill'
+      skill_id = params[:user_skill][:skill_id]
+      user = User.find(params[:user_id])
+      UserSkill.create(user_id: user.id, skill_id: skill_id)
+      redirect_to user_path(user)
+    else
+      skill = Skill.create(skill_params)
+      redirect_to skill_path(skill)
+    end
   end
 
   def edit

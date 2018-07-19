@@ -1,9 +1,26 @@
-<header>
-  <div>Create New Skill</div>
-</header>
+<% if @user_id %>
+  <header>
+    <div>Add New Skill</div>
+  </header>
 
-<section class='new-skill-main'>
-  <div class="new-skill-form">
-    <%= render partial: 'form' %>
-  </div>
-</section>
+  <%= form_for @user_skill do |f| %>
+    <%= f.label 'New Skill' %>
+    <%= f.collection_select :skill_id, Skill.order(:title), :id, :title, include_blank: true %>
+
+    <%= f.label ' ' %>
+    <%= f.hidden_field :user_id, :readonly => true %>
+
+    <%= f.submit 'Add New Skill'%>
+  <% end %>
+
+<% else %>
+  <header>
+    <div>Create New Skill</div>
+  </header>
+
+  <section class='new-skill-main'>
+    <div class="new-skill-form">
+      <%= render partial: 'form' %>
+    </div>
+  </section>
+<% end %>

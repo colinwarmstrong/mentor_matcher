@@ -7,12 +7,15 @@ describe "User visits '/skills/:id'" do
       password: '54321',
       name: 'Colin',
       email: 'colin@email.com',
-      city: 'Denver')
+      city: 'Denver',
+      role: 1)
     category = Category.create(title: 'Music')
     skill = user.skills.create(title: 'Piano', description: 'Keys', category_id: category.id)
 
     updated_skill_title = 'Saxaphone'
     updated_skill_description = 'Jazzy'
+
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
     visit edit_skill_path(skill)
 
