@@ -3,16 +3,19 @@
     <div>Add New Skill</div>
   </header>
 
-  <%= form_for @user_skill do |f| %>
-    <%= f.label 'New Skill' %>
-    <%= f.collection_select :skill_id, Skill.order(:title), :id, :title, include_blank: true %>
+  <section id='new-user-skill-main'>
+    <div id="new-user-skill-form">
+      <%= form_for @user_skill do |f| %>
+        <%= f.label 'New Skill' %>
+        <%= f.collection_select :skill_id, Skill.order(:title), :id, :title, include_blank: true %>
 
-    <%= f.label ' ' %>
-    <%= f.hidden_field :user_id, :readonly => true %>
+        <%= f.label ' ' %>
+        <%= f.hidden_field :user_id, :readonly => true %>
 
-    <%= f.submit 'Add New Skill'%>
-  <% end %>
-
+        <%= f.submit 'Add New Skill'%>
+      <% end %>
+    </div>
+  </section>
 <% else %>
   <header>
     <div>Create New Skill</div>
