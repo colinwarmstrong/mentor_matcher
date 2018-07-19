@@ -148,6 +148,7 @@ summary {
 
 .category-index-main {
   margin-top: 15px;
+  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -162,6 +163,7 @@ summary {
 
 .skill-index-main {
   margin-top: 15px;
+  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -346,4 +348,18 @@ summary {
   padding-right: 40px;
   color: white;
   box-shadow: 5px 5px grey;
+}
+
+#new-user-skill-main {
+  align: center;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+#new-user-skill {
+align: center;
+margin-top: 20px;
+display: flex;
+justify-content: center;
 }
