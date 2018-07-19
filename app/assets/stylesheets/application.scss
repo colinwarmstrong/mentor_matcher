@@ -20,6 +20,7 @@ html, body {
 header {
   height: 100px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: rgba(255, 96, 0, 1.0);
@@ -41,6 +42,8 @@ footer {
 }
 
 summary {
+  position: fixed;
+  width: 100%;
   height: 40px;
   background: rgba(255, 96, 0, 1.0);
   color: rgba(255, 255, 255, 1.0);
@@ -53,8 +56,21 @@ summary {
 .user-show-main {
   margin-top: 20px;
   display: flex;
+  justify-content: center;
+}
+
+.user-show-main-left {
+  margin-right: 70px;
+  display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+.user-show-main-right {
+  margin-left: 70px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -65,6 +81,45 @@ summary {
   align-items: center;
 }
 
+.user-info {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.skill-show-main {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.skill-show-main-left {
+  margin-right: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill-show-main-right {
+  margin-left: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill-show-skill {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-category-link {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
 .welcome-page-main {
   padding: 100px;
   display: flex;
@@ -88,6 +143,48 @@ summary {
   width: 200px;
   background-color: rgba(230,233,237,1.0);
   box-shadow: 5px 5px grey;
+}
+
+.category-index-main {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category-index-main-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-index-main {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill-index-main-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-show-main {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category-show-main-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .new-user-main {
@@ -201,4 +298,51 @@ summary {
 
 #add-new-skill-button {
   border-radius: 0px;
+}
+
+#skills-to-learn-header {
+  text-align: center;
+  width: 400px;
+  border-bottom: solid 2px black;
+  display: flex;
+  justify-content: center;
+}
+
+#skills-to-mentor-header {
+  text-align: center;
+  width: 400px;
+  border-bottom: solid 2px black;
+  display: flex;
+  justify-content: center;
+}
+
+#category-show-main-header {
+  font-size: 36px;
+  width: 300px;
+  border-bottom: solid 2px black;
+  display: flex;
+  justify-content: center;
+}
+
+#category-show-buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+#category-show-edit {
+  font-size: 20px;
+  margin-left: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  color: white;
+  box-shadow: 5px 5px grey;
+}
+
+#category-show-delete {
+  font-size: 20px;
+  margin-right: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  color: white;
+  box-shadow: 5px 5px grey;
 }

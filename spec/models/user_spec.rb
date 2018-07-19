@@ -42,4 +42,52 @@ describe User, type: :model do
       expect(user.admin?).to be_truthy
     end
   end
+
+  describe 'Instance Methods' do
+    it '#skills_to_learn' do
+      user = User.create(
+        username: 'test',
+        password: '54321',
+        name: 'Colin',
+        email: 'colin@email.com',
+        city: 'Denver')
+
+      category = Category.create!(title: 'Outdoors')
+
+      skill_1 = Skill.create(title: 'Baking', category_id: category.id)
+      skill_2 = Skill.create(title: 'Climbing', category_id: category.id)
+      skill_3 = Skill.create(title: 'Hiking', category_id: category.id)
+      skill_4 = Skill.create(title: 'Fishing', category_id: category.id)
+
+      user_skill_1 = UserSkill.create(user_id: user.id, skill_id: skill_1.id)
+      user_skill_2 = UserSkill.create(user_id: user.id, skill_id: skill_2.id)
+      user_skill_3 = UserSkill.create(user_id: user.id, skill_id: skill_3.id, mentoring?: true)
+      user_skill_4 = UserSkill.create(user_id: user.id, skill_id: skill_4.id, mentoring?: true)
+
+      expect(user.skills_to_learn).to eq([skill_1, skill_2])
+    end
+
+    it '#skills_to_mentor' do
+      user = User.create!(
+        username: 'test',
+        password: '54321',
+        name: 'Colin',
+        email: 'colin@email.com',
+        city: 'Denver')
+
+      category = Category.create!(title: 'Outdoors')
+
+      skill_1 = Skill.create!(title: 'Baking', category_id: category.id)
+      skill_2 = Skill.create!(title: 'Climbing', category_id: category.id)
+      skill_3 = Skill.create!(title: 'Hiking', category_id: category.id)
+      skill_4 = Skill.create!(title: 'Fishing', category_id: category.id)
+
+      user_skill_1 = UserSkill.create!(user_id: user.id, skill_id: skill_1.id)
+      user_skill_2 = UserSkill.create!(user_id: user.id, skill_id: skill_2.id)
+      user_skill_3 = UserSkill.create!(user_id: user.id, skill_id: skill_3.id, mentoring?: true)
+      user_skill_4 = UserSkill.create!(user_id: user.id, skill_id: skill_4.id, mentoring?: true)
+
+      expect(user.skills_to_mentor).to eq([skill_3, skill_4])
+    end
+  end
 end

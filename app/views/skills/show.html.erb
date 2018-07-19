@@ -1,10 +1,34 @@
 <header>
-  <div>Skill: <%= @skill.title %></div>
+  <h1><%= @skill.title %></h1>
+  <h4><%= @skill.description %></h4>
 </header>
 
-<summary>
-  <div><%= @skill.description %></div>
-</summary>
+<% if current_admin? %>
+  <div class="btn-group" id='category-show-buttons' role="group" aria-label="Basic example">
+    <%= link_to "Delete", skill_path(@skill), class: "btn btn-secondary", id:'category-show-delete', method: 'delete', data: {confirm: "Really want to delete this skill?"} %>
+    <%= link_to "Edit", edit_skill_path(@skill), class: "btn btn-secondary", id:'category-show-edit', method: 'get' %>
+  </div>
+<% end %>
 
-<p><%= link_to 'Edit', edit_skill_path(@skill) %></p>
-<p><%= link_to 'Delete', skill_path(@skill), method: 'delete', data: {confirm: "Really want to delete this skill?"}  %></p>
+  <div class='skill-category-link'>
+    <h3><%= link_to "View more skills in the #{@skill.category.title} category", category_path(@skill.category) %></h3>
+  </div>
+
+<section class='skill-show-main'>
+  <div class='skill-show-main-left'>
+    <h2 id='skills-to-learn-header'>Students</h2>
+    <% @students.shuffle.each do |student| %>
+      <div class='skill-show-skill'>
+        <h4><%= link_to student.name, user_path(student) %></h4>
+      </div>
+    <% end %>
+  </div>
+  <div class='skill-show-main-right'>
+    <h2 id='skills-to-mentor-header'>Mentors</h2>
+    <% @mentors.shuffle.each do |mentor| %>
+      <div class='skill-show-skill'>
+        <h4><%= link_to mentor.name, user_path(mentor) %></h4>
+      </div>
+    <% end %>
+  </div>
+</section>

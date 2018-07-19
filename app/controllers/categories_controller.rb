@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
-
+  before_action :require_admin, only: [:new, :create, :edit, :update, :destroy]
+  
   def new
     @category = Category.new
   end
@@ -15,6 +16,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
+    @skills = @category.skills
   end
 
   def index

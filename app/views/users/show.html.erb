@@ -1,25 +1,42 @@
-<header>
-  <h1>Welcome, <%= current_user.name %></h1>
-</header>
+<% if @user.id == current_user.id  %>
+  <header>
+    <h1>Welcome, <%= @user.name %></h1>
+  </header>
+<% else %>
+  <header>
+    <h1>Viewing <%= @user.name %>'s profile</h1>
+  </header>
+<% end %>
 
-<a class="btn btn-primary btn-lg btn-block" id='add-new-skill-button' href="<%= new_skill_path %>">Add New Skill</a>
+<% if @user.id == current_user.id || current_admin? %>
+  <a class="btn btn-primary btn-lg btn-block" id='add-new-skill-button' href="<%= new_skill_path %>">Add New Skill</a>
+<% end %>
+
+<section class='user-info'>
+  <h4>Phone Number: <%= @user.phone_number %></h4>
+  <h4> | </h4>
+  <h4>City: <%= @user.city %></h4>
+  <h4> | </h4>
+  <h4>Email: <%= @user.email %></h4>
+</section>
 
 <section class='user-show-main'>
-  <h2>Skills You Want to Learn</h2>
-  <% @user.skills.each do |skill| %>
-    <div class='user-show-skill'>
-      <h4><%= skill.title %></h4>
-      <p><%= skill.description %></p>
-      <p><%= skill.description %></p>
-    </div>
-  <% end %>
-  <br>
-  <h2>Skills You Mentor</h2>
-  <% @user.skills.each do |skill| %>
-    <div class='user-show-skill'>
-      <h4><%= skill.title %></h4>
-      <p><%= skill.description %></p>
-    </div>
-  <% end %>
-  <h3>
+  <div class='user-show-main-left'>
+    <h2 id='skills-to-learn-header'>Skills <%= @user.name %> Wants to Learn</h2>
+    <% @user.skills_to_learn.shuffle.each do |skill| %>
+      <div class='user-show-skill'>
+        <h4><%= link_to skill.title, skill_path(skill) %></h4>
+        <p><%= skill.description %></p>
+      </div>
+    <% end %>
+  </div>
+  <div class='user-show-main-right'>
+    <h2 id='skills-to-mentor-header'>Skills <%= @user.name %> Wants to Mentor</h2>
+    <% @user.skills_to_mentor.shuffle.each do |skill| %>
+      <div class='user-show-skill'>
+        <h4><%= link_to skill.title, skill_path(skill) %></h4>
+        <p><%= skill.description %></p>
+      </div>
+    <% end %>
+  </div>
 </section>

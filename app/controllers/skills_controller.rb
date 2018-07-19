@@ -1,4 +1,5 @@
 class SkillsController < ApplicationController
+  before_action :require_admin, only: [:new, :create, :edit, :update, :destroy]
 
   def index
     @skills = Skill.all
@@ -6,6 +7,8 @@ class SkillsController < ApplicationController
 
   def show
     @skill = Skill.find(params[:id])
+    @students = @skill.find_students
+    @mentors = @skill.find_mentors
   end
 
   def new

@@ -14,9 +14,10 @@ class User < ApplicationRecord
   has_secure_password
 
   def skills_to_learn
-    skills.where()
+    skills.distinct.where(id: UserSkill.where(user_id: id, mentoring?: false).pluck(:skill_id))
   end
 
   def skills_to_mentor
+    skills.distinct.where(id: UserSkill.where(user_id: id, mentoring?: true).pluck(:skill_id))
   end
 end
